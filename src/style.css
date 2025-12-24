@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(90deg, #fef0ed, #ace3f8);
+}
+
+.navbar {
+  display: flex;
+  position: sticky;
+  align-items: center;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  cursor: pointer;
+  background: url(../image/navbar\ -bg.jpg);
+  background-position: 70%;
+  background-size: cover;
+  margin: auto;
+  padding: 8px;
+}
+
+.nav-list {
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 30%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ubuntu", serif;
+  font-size: 20px;
+}
+
+.logo h3:hover {
+  background-image: linear-gradient(45deg, #fd0000, rgb(255, 0, 255), aqua);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.5s ease-out;
+}
+
+.nav-list li {
+  list-style: none;
+  padding: 26px 30px;
+  font-family: "Ubuntu", serif;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #ad5389;
+  font-size: 20px;
+  font-family: "Ubuntu", serif;
+}
+
+.nav-list li a:hover {
+  color: #fc4a1a;
+  text-decoration: overline;
+  transition: all 0.1s ease-out;
+}
+
+.rightNav {
+  width: 30%;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 23px;
+}
+
+#search {
+  padding: 5px;
+  font-size: 15px;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.btn {
+  margin-left: 10px;
+  font-size: 13px;
+  padding: 5px;
+  color: #ad5389;
+  border: 3px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ad5389;
+  color: white;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ----- Responsive Navbar ----- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffcc80;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .nav-list li {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  /* Adjust right-nav layout */
+  .right-nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.log-in {
+  text-decoration: none;
+  color: #ad5389;
+  font-family: "Ubuntu", serif;
+  display: grid;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 800;
+}
+
+.log-in:hover {
+  color: #1282a2;
+  text-decoration: underline;
+}
+
+.firstsection {
+  height: 60vw;
+  overflow: hidden;
+}
+
+.firsthalf {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  aspect-ratio: 2/1;
+}
+
+.first-half h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+  height: 20%;
+  font-size: 100px;
+  font-weight: 50;
+  gap: 0.5rem;
+  color: #312f2e;
+}
+
+.first-half p {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.first-half .align {
+  background-color: #fec6df; /* Vibrant Orange */
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 20px auto;
+}
+
+.first-half .align:hover {
+  background-color: yellow; /* Slightly Darker Orange */
+  transform: translateY(-2px);
+}
+
+.first-half .align:active {
+  transform: translateY(1px);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.image img {
+  display: block;
+  margin: 30px auto;
+  height: 35vw;
+  width: 100%;
+  margin-bottom: auto;
+  position: static;
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: darken;
+}
+
+.image img:hover {
+  filter: drop-shadow(1px 5px 15px black);
+  transition: all 0.2s ease-in;
+  position: sticky;
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+  .first-half h1 {
+    font-size: 1.5rem;
+  }
+
+  .first-half p {
+    font-size: 1rem;
+  }
+}
+
+.box-img {
+  mix-blend-mode: darken;
+}
+
+.box:hover {
+  border: 1px dotted black;
+}
+
+.shopping-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* background-color: #f4ede6; */
+  justify-content: space-evenly;
+  aspect-ratio: 2/1;
+}
+
+.box-img {
+  height: 340px;
+  width: 450px;
+  background-size: cover;
+  margin-top: 0.25rem;
+  padding: 10px;
+  margin-bottom: 0.55rem;
+  aspect-ratio: 2/1;
+}
+
+@media (max-width: 480px) {
+  .shopping-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.box-content-1 p {
+  color: #fc4a1a;
+  font-size: 20px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+}
+
+.box-content-2 p {
+  color: #fc4a1a;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.box-content-3 p {
+  color: #fc4a1a;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.box-content p {
+  color: #fc4a1a;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.hover:hover {
+  color: green;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: relative;
+}
+
+.box h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-section h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #fc4a1a;
+}
+
+.footer-section ul li a:active {
+  color: #fc4a1a;
+}
+
+.footer-section ul li a:focus {
+  color: #fc4a1a;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px 5px 10px 5px;
+  background-image: linear-gradient(45deg, #fd0000, rgb(255, 0, 255), aqua);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+hr {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 15px 1px 1px;
+  font-size: 18px;
+  padding: 10px 5px 10px 5px;
+}
+
+.footer-copyright a {
+  text-decoration: none;
+  color: aqua;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
